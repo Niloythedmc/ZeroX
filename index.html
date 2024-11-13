@@ -14,7 +14,7 @@
         }
         body {
             font-family: Arial, sans-serif;
-            background-color: #f1f1f1;
+            position: relative;
         }
         .container {
             width: 100%;
@@ -22,7 +22,6 @@
             justify-content: center;
             display: block;
             margin: 0 auto;
-            background-color: white;
         }
         header {
             display: flex;
@@ -99,13 +98,13 @@
             height: 40px;
             border-radius: 8px;
         }
-        .post .top-info .profile-text {
+        .profile-text {
             font-weight: bold;
             margin-left: 10px;
             height: 15px;
             border-radius: 8px;
         }
-        .post .top-info .time {
+        .time {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: small;
             width: 150px;
@@ -114,15 +113,16 @@
             height: 15px;
             border-radius: 8px;
         }
-        .post .content {
+        .content {
             margin: 10px 0;
             justify-content: center;
         }
-        .post .content img {
+        .content img {
             max-height: 200px;
+            max-width: 100%;
             border-radius: 15px;
         }
-        .post .text-content {
+        .text-content {
             margin: 10px 0;
         }
         .post .footer {
@@ -170,19 +170,23 @@
         }
         .local{
             justify-content: center;
-            background-color: #007bff;
-            height: 100vh;
             width: 100%;
+            padding: 15px;
+        }
+        .feedhead{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            font-size: 20px;
         }
         .shop{
             justify-content: center;
-            height: 100vh;
             width: 100%;
             background-color: #007bff;
         }
         .profile{
             justify-content: center;
-            height: 100vh;
             width: 100%;
             background-color: #007bff;
         }
@@ -240,6 +244,7 @@
                     </div>
                 </div>
                 <div class="text-content">
+                    we are on the way
                 </div>
                 <div class="content">
                     <img src="notpixipost.jpg" alt="">
@@ -278,7 +283,72 @@
         </div>
 
         <div id="local" class="local hidden">
-            <h2>LOCAL</h2>
+            <div class="feedhead">Feed</div>
+            <div class="post">
+                <div class="top-info">
+                    <div class="profile-pic">
+                        <img src="dogpic.jpg" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="profile-text">DOGS Community</div>
+                    </div>
+                </div>
+                <div class="content">
+                </div>
+                <div class="text-content">
+                    🏴‍☠️ If you haven’t found the clue yet… 🦴
+
+Have you checked this hidden vault 😎<br>
+
+Who knows, you might find a piece of the puzzle there... 
+And while you’re at it, feel free to paint some DOGS! 🐶
+                </div>
+                <div class="time">8:38 PM</div>
+            </div>
+    
+            <div class="post">
+                <div class="top-info">
+                    <div class="profile-pic">
+                        <img src="binancepic.jpg" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="profile-text">Binance Announcement</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <img src="binancepost.jpg" alt="">
+                </div>
+                <div class="text-content">
+                    Earn Wednesday: New Limited-Time Offers Available Now! (2024-11-13)
+                </div>
+                <div class="time">9:32 AM PM</div>
+            </div>
+    
+            <div class="post">
+                <div class="top-info">
+                    <div class="profile-pic">
+                        <img src="pawspic.jpg" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="profile-text">PAWS Community</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <img src="pawspost.jpg" alt="">
+                </div>
+                <div class="text-content">
+                    Final Push, PAWS -  5 Hours Left To Vote! 🐾 
+   
+The finish line’s right there, so make sure you voted and completed the tasks.<br>
+
+LAST CHANCE TO VOTE!<br>
+
+Your pick might shake up the leaderboard!<br>
+
+Extra PAWS, if your choice wins or loses… 🤫
+                </div>
+                <div class="time">8:09 PM</div>
+            </div>
         </div>
 
         <div id="shop" class="shop hidden">
