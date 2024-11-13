@@ -17,7 +17,6 @@
             background-color: #f1f1f1;
         }
         .container {
-            position: relative;
             width: 100%;
             height: 100vh;
             justify-content: center;
@@ -87,13 +86,13 @@
             border-radius: 50%;
             float: left;
         }
-        .profile-pic img{
+        .profile-pic img {
             height: 40px;
             width: 40px;
             border: 1px solid black;
             border-radius: 50%;
         }
-        .post .top-info .detail{
+        .post .top-info .detail {
             padding-top: 2px;
             width: 250px;
             margin-left: 45px;
@@ -106,7 +105,7 @@
             height: 15px;
             border-radius: 8px;
         }
-        .post .top-info .time{
+        .post .top-info .time {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: small;
             width: 150px;
@@ -119,7 +118,7 @@
             margin: 10px 0;
             justify-content: center;
         }
-        .post .content img{
+        .post .content img {
             max-height: 200px;
             border-radius: 15px;
         }
@@ -168,6 +167,24 @@
         }
         .hidden {
             display: none;
+        }
+        .local{
+            justify-content: center;
+            background-color: #007bff;
+            height: 100vh;
+            width: 100%;
+        }
+        .shop{
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            background-color: #007bff;
+        }
+        .profile{
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            background-color: #007bff;
         }
     </style>
 </head>
@@ -219,7 +236,7 @@
                     </div>
                     <div class="detail">
                         <div class="profile-text">Not Pixi me</div>
-                        <div class="time">19 august 2024, 09:22pm</div>
+                        <div class="time">19 August 2024, 09:22pm</div>
                     </div>
                 </div>
                 <div class="text-content">
@@ -261,12 +278,20 @@
         </div>
 
         <div id="local" class="local hidden">
-            <img src="images/signlogo.png" alt="">
+            <h2>LOCAL</h2>
+        </div>
+
+        <div id="shop" class="shop hidden">
+            <h2>SHOP</h2>
+        </div>
+
+        <div id="profile" class="profile hidden">
+            <h2>PROFILE</h2>
         </div>
 
         <div class="bottom-nav">
-            <div class="nav-item" id="dashboard-icon">
-                <i class="material-icons" style="color: blue;">dashboard</i>
+            <div class="nav-item selected" id="dashboard-icon">
+                <i class="material-icons">dashboard</i>
             </div>
             <div class="nav-item" id="favorite-icon">
                 <i class="material-icons">favorite</i>
@@ -284,22 +309,31 @@
         // Get references to elements
         const dashboardIcon = document.getElementById('dashboard-icon');
         const favoriteIcon = document.getElementById('favorite-icon');
+        const shoppingIcon = document.getElementById('shopping-icon');
+        const personIcon = document.getElementById('person-icon');
+
         const homeDiv = document.getElementById('home');
         const localDiv = document.getElementById('local');
+        const shopDiv = document.getElementById('shop');
+        const profileDiv = document.getElementById('profile');
+        
         const navItems = document.querySelectorAll('.bottom-nav .nav-item');
 
-        // Function to reset all nav items to black
+        // Function to reset all nav items to black and all divs to hidden
         function resetNavColors() {
             navItems.forEach(item => {
                 item.classList.remove('selected');
             });
+            homeDiv.classList.add('hidden');
+            localDiv.classList.add('hidden');
+            shopDiv.classList.add('hidden');
+            profileDiv.classList.add('hidden');
         }
 
         // Event listener for the dashboard icon
         dashboardIcon.addEventListener('click', function() {
             resetNavColors();
             homeDiv.classList.remove('hidden');
-            localDiv.classList.add('hidden');
             dashboardIcon.classList.add('selected');
         });
 
@@ -307,8 +341,21 @@
         favoriteIcon.addEventListener('click', function() {
             resetNavColors();
             localDiv.classList.remove('hidden');
-            homeDiv.classList.add('hidden');
             favoriteIcon.classList.add('selected');
+        });
+
+        // Event listener for the shopping icon
+        shoppingIcon.addEventListener('click', function() {
+            resetNavColors();
+            shopDiv.classList.remove('hidden');
+            shoppingIcon.classList.add('selected');
+        });
+
+        // Event listener for the person icon
+        personIcon.addEventListener('click', function() {
+            resetNavColors();
+            profileDiv.classList.remove('hidden');
+            personIcon.classList.add('selected');
         });
     </script>
 </body>
