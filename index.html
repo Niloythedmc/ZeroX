@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroX UI</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            display: block;
+            margin: 0 auto;
+            background-color: white;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 25px;
+            margin: 10px;
+            border: 1px solid #ddd;
+        }
+        .search-box input {
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+            padding-left: 10px;
+        }
+        .search-box .material-icons {
+            font-size: 20px;
+            color: #888;
+        }
+        .tags {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px;
+        }
+        .tag {
+            padding: 5px 15px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+        .post {
+            background-color: white;
+            border-radius: 15px;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 0px 7px rgba(0, 0, 0, 0.2);
+        }
+        .post .top-info {
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .post .top-info .profile-pic {
+            width: 40px;
+            height: 40px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            float: left;
+        }
+        .profile-pic img{
+            height: 40px;
+            width: 40px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+        .post .top-info .detail{
+            padding-top: 2px;
+            width: 250px;
+            margin-left: 45px;
+            height: 40px;
+            border-radius: 8px;
+        }
+        .post .top-info .profile-text {
+            font-weight: bold;
+            margin-left: 10px;
+            height: 15px;
+            border-radius: 8px;
+        }
+        .post .top-info .time{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: small;
+            width: 150px;
+            margin-top: 5px;
+            margin-left: 10px;
+            height: 15px;
+            border-radius: 8px;
+        }
+        .post .content {
+            margin: 10px 0;
+            justify-content: center;
+        }
+        .post .content img{
+            max-height: 200px;
+            border-radius: 15px;
+        }
+        .post .text-content {
+            margin: 10px 0;
+        }
+        .post .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer .reactions {
+            display: flex;
+            align-items: center;
+        }
+        .footer .reactions span {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 14px;
+        }
+        .footer .reactions .material-icons {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        .bottom-nav {
+            position: sticky;
+            bottom: 0%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            border-top: 2px solid #9c9c9c;
+        }
+        .bottom-nav .nav-item {
+            text-align: center;
+            color: black; /* Default color for all nav items */
+        }
+        .bottom-nav .nav-item.selected {
+            color: #007bff; /* Blue color for the selected nav item */
+        }
+        .bottom-nav .nav-item .material-icons {
+            font-size: 30px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ZEROX</h1>
+        </header>
+        <div id="home" class="home">
+            <div class="search-box">
+                <i class="material-icons">search</i>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="tags">
+                <div class="tag">#top</div>
+                <div class="tag">#trend</div>
+                <div class="tag">#social</div>
+                <div class="tag">#crypto</div>
+            </div>
+            <!-- Post 1 -->
+            <div class="post">
+                <div class="top-info">
+                    <div class="profile-pic">
+                        <img src="images/myphoto.jpg" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="profile-text">Joynal Gazi Niloy</div>
+                        <div class="time">8 Nov 2024, 4:30pm</div>
+                    </div>
+                </div>
+                <div class="text-content">
+                    $BTC making All Time High with every single candle. What is your prediction next?
+                </div>
+                <div class="content">
+                    <img src="" alt="">
+                </div>
+                <div class="footer">
+                    <div class="reactions">
+                        <span><i class="material-icons">favorite_border</i> 1.4K</span>
+                        <span><i class="material-icons">chat_bubble_outline</i> 376</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 2 -->
+            <div class="post">
+                <div class="top-info">
+                    <div class="profile-pic">
+                        <img src="images/pixpic.jpg" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="profile-text">Not Pixi me</div>
+                        <div class="time">19 august 2024, 09:22pm</div>
+                    </div>
+                </div>
+                <div class="text-content">
+                </div>
+                <div class="content">
+                    <img src="images/notpixipost.jpg" alt="">
+                </div>
+                <div class="footer">
+                    <div class="reactions">
+                        <span><i class="material-icons">favorite_border</i> 9.5K</span>
+                        <span><i class="material-icons">chat_bubble_outline</i> 1.8K</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 3 -->
+            <div class="post">
+                <div class="top-info">
+                    <div class="profile-pic">
+                        <img src="images/hkhridoy.jpg" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="profile-text">HK Hridoy Khan</div>
+                        <div class="time">15 Nov 2024, 07:27am</div>
+                    </div>
+                </div>
+                <div class="text-content">
+                    Something crazy gonna be happen.... Are u ready?.. 
+                </div>
+                <div class="content">
+                    <img src="" alt="">
+                </div>
+                <div class="footer">
+                    <div class="reactions">
+                        <span><i class="material-icons">favorite_border</i> 710</span>
+                        <span><i class="material-icons">chat_bubble_outline</i> 292</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="local" class="local hidden">
+            <img src="images/signlogo.png" alt="">
+        </div>
+
+        <div class="bottom-nav">
+            <div class="nav-item" id="dashboard-icon">
+                <i class="material-icons" style="color: blue;">dashboard</i>
+            </div>
+            <div class="nav-item" id="favorite-icon">
+                <i class="material-icons">favorite</i>
+            </div>
+            <div class="nav-item" id="shopping-icon">
+                <i class="material-icons">shopping_bag</i>
+            </div>
+            <div class="nav-item" id="person-icon">
+                <i class="material-icons">person</i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get references to elements
+        const dashboardIcon = document.getElementById('dashboard-icon');
+        const favoriteIcon = document.getElementById('favorite-icon');
+        const homeDiv = document.getElementById('home');
+        const localDiv = document.getElementById('local');
+        const navItems = document.querySelectorAll('.bottom-nav .nav-item');
+
+        // Function to reset all nav items to black
+        function resetNavColors() {
+            navItems.forEach(item => {
+                item.classList.remove('selected');
+            });
+        }
+
+        // Event listener for the dashboard icon
+        dashboardIcon.addEventListener('click', function() {
+            resetNavColors();
+            homeDiv.classList.remove('hidden');
+            localDiv.classList.add('hidden');
+            dashboardIcon.classList.add('selected');
+        });
+
+        // Event listener for the favorite icon
+        favoriteIcon.addEventListener('click', function() {
+            resetNavColors();
+            localDiv.classList.remove('hidden');
+            homeDiv.classList.add('hidden');
+            favoriteIcon.classList.add('selected');
+        });
+    </script>
+</body>
+</html>
