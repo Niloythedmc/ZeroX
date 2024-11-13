@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    margin: 10px;
+    border: 1px solid #ddd;
+}
+.search-box input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    padding-left: 10px;
+}
+.search-box .material-icons {
+    font-size: 20px;
+    color: #888;
+}
+.tags {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+.tag {
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 15px;
+    font-size: 14px;
+}
+.post {
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 0px 7px rgba(0, 0, 0, 0.2);
+}
+.post .top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.post .top-info .profile-pic {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+.post .top-info .profile-text {
+    flex-grow: 1;
+    margin-left: 10px;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+.post .content {
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    width: 100%;
+    height: 200px;
+    margin: 10px 0;
+}
+.post .text-content {
+    margin: 10px 0;
+}
+.post .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .reactions {
+    display: flex;
+    align-items: center;
+}
+.footer .reactions span {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 14px;
+}
+.footer .reactions .material-icons {
+    font-size: 20px;
+    margin-right: 5px;
+}
+.bottom-nav {
+    position: sticky;
+    bottom: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-top: 2px solid #9c9c9c;
+}
+.bottom-nav .nav-item {
+    text-align: center;
+    color: #007bff;
+}
+.bottom-nav .nav-item .material-icons {
+    font-size: 30px;
+}
