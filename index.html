@@ -13,10 +13,9 @@
             box-sizing: border-box;
         }
         body {
-            height: auto;
             font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
             position: relative;
-            background-color: white;
         }
         .container {
             width: 100%;
@@ -186,12 +185,43 @@
         .shop{
             justify-content: center;
             width: 100%;
-            background-color: #007bff;
+            padding: 30px;
         }
         .profile{
             justify-content: center;
             width: 100%;
-            background-color: #007bff;
+        }
+        .shop h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .placeholder {
+            background-color: #e0e0e0;
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .text-placeholder {
+            background-color: #ddd;
+            height: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .text-placeholder.short {
+            width: 50%;
+        }
+
+        .text-placeholder.long {
+            width: 80%;
         }
     </style>
 </head>
@@ -286,76 +316,95 @@
         </div>
 
         <div id="local" class="local hidden">
-            <div class="feedhead">Feed</div>
+            <div class="feedhead">Feed <br>
+                <h4 style="font-size: 10px;">coming soon...</h4>
+            </div>
             <div class="post">
                 <div class="top-info">
-                    <div class="profile-pic">
-                        <img src="dogpic.jpg" alt="">
+                    <div class="profile-pic" style="height: 40px; width: 40px; background-color: lightgray;">
+                        
                     </div>
                     <div class="detail">
-                        <div class="profile-text">DOGS Community</div>
+                        <div class="profile-text" style="height: 20px; width: 150px; background-color: lightgray;"></div>
                     </div>
                 </div>
-                <div class="content">
+                <div class="content" style="width: 100%; height: 200px; background-color: lightgray; border-radius: 10px; margin-bottom: 10px;">
                 </div>
                 <div class="text-content">
-                    🏴‍☠️ If you haven’t found the clue yet… 🦴
-
-Have you checked this hidden vault 😎<br>
-
-Who knows, you might find a piece of the puzzle there... 
-And while you’re at it, feel free to paint some DOGS! 🐶
                 </div>
-                <div class="time">8:38 PM</div>
+                <div class="time">12:00 PM</div>
             </div>
     
             <div class="post">
                 <div class="top-info">
-                    <div class="profile-pic">
-                        <img src="binancepic.jpg" alt="">
+                    <div class="profile-pic" style="height: 40px; width: 40px; background-color: lightgray;">
+                        
                     </div>
                     <div class="detail">
-                        <div class="profile-text">Binance Announcement</div>
+                        <div class="profile-text" style="height: 20px; width: 150px; background-color: lightgray;"></div>
                     </div>
                 </div>
-                <div class="content">
-                    <img src="binancepost.jpg" alt="">
+                <div class="content" style="width: 100%; height: 200px; background-color: lightgray; border-radius: 10px; margin-bottom: 10px;">
+                    <img src="" alt="">
                 </div>
                 <div class="text-content">
-                    Earn Wednesday: New Limited-Time Offers Available Now! (2024-11-13)
                 </div>
-                <div class="time">9:32 AM PM</div>
+                <div class="time">12:00 PM</div>
             </div>
     
             <div class="post">
                 <div class="top-info">
-                    <div class="profile-pic">
-                        <img src="pawspic.jpg" alt="">
+                    <div class="profile-pic" style="height: 40px; width: 40px; background-color: lightgray;">
+                        
                     </div>
                     <div class="detail">
-                        <div class="profile-text">PAWS Community</div>
+                        <div class="profile-text" style="height: 20px; width: 150px; background-color: lightgray;"></div>
                     </div>
                 </div>
-                <div class="content">
-                    <img src="pawspost.jpg" alt="">
+                <div class="content" style="width: 100%; height: 200px; background-color: lightgray; border-radius: 10px; margin-bottom: 10px;">
+                    <img src="" alt="">
                 </div>
                 <div class="text-content">
-                    Final Push, PAWS -  5 Hours Left To Vote! 🐾 
-   
-The finish line’s right there, so make sure you voted and completed the tasks.<br>
-
-LAST CHANCE TO VOTE!<br>
-
-Your pick might shake up the leaderboard!<br>
-
-Extra PAWS, if your choice wins or loses… 🤫
                 </div>
-                <div class="time">8:09 PM</div>
+                <div class="time">12:00 PM</div>
             </div>
         </div>
 
-        <div id="shop" class="shop hidden">
-            <h2>SHOP</h2>
+        <div id="shop" class="shop hidden" style="text-align: center; margin-top: 0%;">
+            <h1>Shop</h1>
+                <h4 style="font-size: 10px;">coming soon...</h4>
+    <div class="grid">
+        <div>
+            <div class="placeholder"></div>
+            <div class="text-placeholder long"></div>
+            <div class="text-placeholder short"></div>
+        </div>
+        <div>
+            <div class="placeholder"></div>
+            <div class="text-placeholder long"></div>
+            <div class="text-placeholder short"></div>
+        </div>
+        <div>
+            <div class="placeholder"></div>
+            <div class="text-placeholder long"></div>
+            <div class="text-placeholder short"></div>
+        </div>
+        <div>
+            <div class="placeholder"></div>
+            <div class="text-placeholder long"></div>
+            <div class="text-placeholder short"></div>
+        </div>
+        <div>
+            <div class="placeholder"></div>
+            <div class="text-placeholder long"></div>
+            <div class="text-placeholder short"></div>
+        </div>
+        <div>
+            <div class="placeholder"></div>
+            <div class="text-placeholder long"></div>
+            <div class="text-placeholder short"></div>
+        </div>
+    </div>
         </div>
 
         <div id="profile" class="profile hidden">
