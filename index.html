@@ -292,6 +292,7 @@
 }
 .followers-grid {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 20px;
@@ -580,7 +581,7 @@
         </div>
     </div>
         </div>
-        <div id="profile" class="profile hidden">
+        <div id="profile" class="profile hidden" style="padding: 20px;">
             <h1 class="profile-title">Profile</h1>
                 <div class="profile-header">
                     <div class="profile-picture"></div>
@@ -600,7 +601,7 @@
                 </div>
                 <div class="profile-tabs">
                     <button class="tab active" onclick="showTab('posts')">Posts</button>
-                    <button class="tab" onclick="showTab('followers')">Followers</button>
+                    <button class="tab" onclick="showTab('followers')" style="text-align: center;">Followers</button>
                     <button class="tab" onclick="showTab('earn')">Earn</button>
                 </div>
                 <div id="posts-grid" class="posts-grid" style="width: 100%;">
