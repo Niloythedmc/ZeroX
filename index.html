@@ -713,8 +713,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const username = user.username;
 
       // Example: Display user info on your page
-      document.getElementById("profile-name")[0].innerText = `Welcome, ${fullName}`;
-      document.getElementById("profile-username")[0].innerText = `@${username}`;
+      document.getElementsByClassName("profile-name")[0].innerText = `Welcome, ${fullName}`;
+      document.getElementsByClassName("profile-username")[0].innerText = `@${username}`;
     } else {
       console.error("User data not available");
     }
