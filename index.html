@@ -586,8 +586,8 @@
                 <div class="profile-header">
                     <div class="profile-picture"></div>
                     <div class="profile-info">
-                        <div class="profile-name">Niloy Gazi</div>
-                        <div class="profile-username">@niloythedmc</div>
+                        <div class="profile-name"></div>
+                        <div class="profile-username"></div>
                         <div class="Balance" style="font-size: 14px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Balance: 1600 $dogs</div>
                         <div class="tr-sec" style="display: flex; margin-top: 10px;">
                             <div class="dp" style="float: left;font-size: 13px; height: 20px;width: 80px; padding-top: 2px; font-weight: bold; border-radius: 10px; color: white; margin-right: 130px; background-color: rgb(84, 153, 255);">DEPOSIT</div>
@@ -694,9 +694,34 @@
                         inviteLink.select();
                         inviteLink.setSelectionRange(0, 99999);
                         navigator.clipboard.writeText(inviteLink.value).then(() => {
-                            alert("Link copied to clipboard!");
                         });
                     }
+
+                    // Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+  // Check if Telegram Web App is available
+  if (window.Telegram && Telegram.WebApp) {
+    // Initialize the Telegram Web App
+    const tg = Telegram.WebApp;
+
+    // Get user data from initDataUnsafe
+    const user = tg.initDataUnsafe.user;
+
+    // Check if user data is available
+    if (user) {
+      const fullName = `${user.first_name || ""} ${user.last_name || ""}`.trim();
+      const username = user.username;
+
+      // Example: Display user info on your page
+      document.getElementById("profile-name").innerText = `Welcome, ${fullName}`;
+      document.getElementById("profile-username").innerText = `@${username}`;
+    } else {
+      console.error("User data not available");
+    }
+  } else {
+    console.error("Telegram WebApp API is not available");
+  }
+});
                 </script>
         </div>
         <div class="bottom-nav">
